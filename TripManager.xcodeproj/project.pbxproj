@@ -19,6 +19,7 @@
 		546F7A9024533D5D0054316C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* Coordinator.swift */; };
 		546F7A95245354100054316C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A94245354100054316C /* HomeView.swift */; };
 		546F7A97245354DD0054316C /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A96245354DD0054316C /* TripListView.swift */; };
+		546F7A99245358750054316C /* trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A98245358750054316C /* trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		546F7A8F24533D5D0054316C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		546F7A94245354100054316C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		546F7A96245354DD0054316C /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
+		546F7A98245358750054316C /* trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		546362D224533187006ADCA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				546F7A98245358750054316C /* trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
 				546F7A9024533D5D0054316C /* Coordinator.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,
+				546F7A99245358750054316C /* trip.swift in Sources */,
 				546F7A95245354100054316C /* HomeView.swift in Sources */,
 				546362D024533091006ADCA1 /* MapView.swift in Sources */,
 				5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */,
