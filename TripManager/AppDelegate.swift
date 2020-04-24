@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  TripManager
-//
-//  Created by Mauricio Vazquez on 4/24/20.
-//  Copyright © 2020 CoderCamp. All rights reserved.
-//
-
 import UIKit
 import CoreData
 

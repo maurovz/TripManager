@@ -1,0 +1,12 @@
+os:
+  - osx
+language: swift
+sudo: required
+osx_image: xcode11.3
+script:
+  - set -o pipefail
+  - xcodebuild -project TripManager.xcodeproj -scheme "TripManager"  -sdk iphonesimulator  -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.3' test
+notifications:
+  email:
+    on_success: never
+    on_failure: change
