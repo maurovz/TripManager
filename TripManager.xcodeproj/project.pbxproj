@@ -10,12 +10,13 @@
 		5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629C24530194006ADCA1 /* AppDelegate.swift */; };
 		5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629E24530194006ADCA1 /* SceneDelegate.swift */; };
 		546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546362A024530194006ADCA1 /* TripManager.xcdatamodeld */; };
-		546362A424530194006ADCA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362A324530194006ADCA1 /* ContentView.swift */; };
 		546362A624530198006ADCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546362A524530198006ADCA1 /* Assets.xcassets */; };
 		546362A924530198006ADCA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546362A824530198006ADCA1 /* Preview Assets.xcassets */; };
 		546362AC24530198006ADCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546362AA24530198006ADCA1 /* LaunchScreen.storyboard */; };
 		546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362B624530199006ADCA1 /* TripManagerTests.swift */; };
 		546362C224530199006ADCA1 /* TripManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362C124530199006ADCA1 /* TripManagerUITests.swift */; };
+		546362D024533091006ADCA1 /* InitialMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362CF24533091006ADCA1 /* InitialMapView.swift */; };
+		546F7A9024533D5D0054316C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		5463629C24530194006ADCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5463629E24530194006ADCA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		546362A124530194006ADCA1 /* TripManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripManager.xcdatamodel; sourceTree = "<group>"; };
-		546362A324530194006ADCA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		546362A524530198006ADCA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		546362A824530198006ADCA1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		546362AB24530198006ADCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		546362BD24530199006ADCA1 /* TripManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		546362C124530199006ADCA1 /* TripManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManagerUITests.swift; sourceTree = "<group>"; };
 		546362C324530199006ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		546362CF24533091006ADCA1 /* InitialMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialMapView.swift; sourceTree = "<group>"; };
+		546F7A8F24533D5D0054316C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +103,11 @@
 		5463629B24530194006ADCA1 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
-				5463629C24530194006ADCA1 /* AppDelegate.swift */,
-				5463629E24530194006ADCA1 /* SceneDelegate.swift */,
-				546362A324530194006ADCA1 /* ContentView.swift */,
+				546F7A912453449C0054316C /* Delegates */,
+				546F7A8C24533CF70054316C /* Coordinators */,
+				546362D32453318E006ADCA1 /* ViewModels */,
+				546362D224533187006ADCA1 /* Models */,
+				546362D124533181006ADCA1 /* Views */,
 				546362A524530198006ADCA1 /* Assets.xcassets */,
 				546362AA24530198006ADCA1 /* LaunchScreen.storyboard */,
 				546362AD24530198006ADCA1 /* Info.plist */,
@@ -137,6 +141,45 @@
 				546362C324530199006ADCA1 /* Info.plist */,
 			);
 			path = TripManagerUITests;
+			sourceTree = "<group>";
+		};
+		546362D124533181006ADCA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				546362CF24533091006ADCA1 /* InitialMapView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		546362D224533187006ADCA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		546362D32453318E006ADCA1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		546F7A8C24533CF70054316C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				546F7A8F24533D5D0054316C /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		546F7A912453449C0054316C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				5463629C24530194006ADCA1 /* AppDelegate.swift */,
+				5463629E24530194006ADCA1 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
+				546F7A9024533D5D0054316C /* Coordinator.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,
-				546362A424530194006ADCA1 /* ContentView.swift in Sources */,
+				546362D024533091006ADCA1 /* InitialMapView.swift in Sources */,
 				5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
