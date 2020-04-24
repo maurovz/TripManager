@@ -2,7 +2,7 @@ import UIKit
 import MapKit
 import SwiftUI
 
-struct InitialMapView: UIViewRepresentable {
+struct MapView: UIViewRepresentable {
   func makeCoordinator() -> Coordinator {
     Coordinator(self)
   }
@@ -14,12 +14,12 @@ struct InitialMapView: UIViewRepresentable {
     return map
   }
   
-  func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<InitialMapView>) {
+  func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
   }
 }
 
 struct InitialMapView_Previews: PreviewProvider {
   static var previews: some View {
-    InitialMapView()
+    MapView()
   }
 }
