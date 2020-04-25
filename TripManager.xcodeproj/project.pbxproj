@@ -19,7 +19,7 @@
 		546F7A9024533D5D0054316C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* Coordinator.swift */; };
 		546F7A95245354100054316C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A94245354100054316C /* HomeView.swift */; };
 		546F7A97245354DD0054316C /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A96245354DD0054316C /* TripListView.swift */; };
-		546F7A99245358750054316C /* trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A98245358750054316C /* trip.swift */; };
+		546F7A99245358750054316C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A98245358750054316C /* Trip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 		546F7A8F24533D5D0054316C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		546F7A94245354100054316C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		546F7A96245354DD0054316C /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
-		546F7A98245358750054316C /* trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trip.swift; sourceTree = "<group>"; };
+		546F7A98245358750054316C /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,15 +109,14 @@
 		5463629B24530194006ADCA1 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
+				546362AD24530198006ADCA1 /* Info.plist */,
+				547B364824548CEC00EC3E19 /* Supporting Files */,
+				547B364924548D1E00EC3E19 /* Resources */,
 				546F7A912453449C0054316C /* Delegates */,
 				546F7A8C24533CF70054316C /* Coordinators */,
 				546362D32453318E006ADCA1 /* ViewModels */,
 				546362D224533187006ADCA1 /* Models */,
 				546362D124533181006ADCA1 /* Views */,
-				546362A524530198006ADCA1 /* Assets.xcassets */,
-				546362AA24530198006ADCA1 /* LaunchScreen.storyboard */,
-				546362AD24530198006ADCA1 /* Info.plist */,
-				546362A024530194006ADCA1 /* TripManager.xcdatamodeld */,
 				546362A724530198006ADCA1 /* Preview Content */,
 			);
 			path = TripManager;
@@ -162,7 +161,7 @@
 		546362D224533187006ADCA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				546F7A98245358750054316C /* trip.swift */,
+				546F7A98245358750054316C /* Trip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +188,23 @@
 				5463629E24530194006ADCA1 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		547B364824548CEC00EC3E19 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				546362AA24530198006ADCA1 /* LaunchScreen.storyboard */,
+				546362A024530194006ADCA1 /* TripManager.xcdatamodeld */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		547B364924548D1E00EC3E19 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				546362A524530198006ADCA1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +342,7 @@
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
 				546F7A9024533D5D0054316C /* Coordinator.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,
-				546F7A99245358750054316C /* trip.swift in Sources */,
+				546F7A99245358750054316C /* Trip.swift in Sources */,
 				546F7A95245354100054316C /* HomeView.swift in Sources */,
 				546362D024533091006ADCA1 /* MapView.swift in Sources */,
 				5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */,
