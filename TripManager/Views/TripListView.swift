@@ -6,6 +6,7 @@ struct TripListView: View {
   
   var body: some View {
     UITableView.appearance().separatorColor = .clear
+    print(tripsViewModel.count)
     return VStack {
       HStack {
         VStack {

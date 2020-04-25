@@ -9,7 +9,6 @@ class TripListViewModel: ObservableObject {
   
   private func fetchTrips() {
     WebService().getTrips { trips in
-      print(trips)
       if let trips = trips {
         DispatchQueue.main.async {
           self.tripViewModel = trips.map(TripViewModel.init)

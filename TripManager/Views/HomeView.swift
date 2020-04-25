@@ -1,11 +1,12 @@
 import SwiftUI
 
 struct HomeView: View {
-  let tripListViewModel = TripListViewModel()
+  @ObservedObject private var tripListViewModel = TripListViewModel()
   
   init() {
     tripListViewModel.load()
   }
+  
   var body: some View {
     VStack {
       MapView()

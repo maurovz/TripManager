@@ -21,8 +21,6 @@ class WebService {
       } catch {
         print(error)
       }
-
-      
     }.resume()
   }
 }

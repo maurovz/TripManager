@@ -23,9 +23,7 @@
 		547B364C24549C9500EC3E19 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364B24549C9500EC3E19 /* WebService.swift */; };
 		547B364E24549CB500EC3E19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364D24549CB500EC3E19 /* Constants.swift */; };
 		547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364F24549E9100EC3E19 /* TripListViewModel.swift */; };
-		547B365124549E9100EC3E19 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364F24549E9100EC3E19 /* TripListViewModel.swift */; };
 		547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
-		547B36542454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -380,8 +378,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */,
-				547B36542454A65000EC3E19 /* TripViewModel.swift in Sources */,
-				547B365124549E9100EC3E19 /* TripListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
