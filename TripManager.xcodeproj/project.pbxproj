@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5403197D2458994D007B778A /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403197C2458994C007B778A /* StopAnnotation.swift */; };
+		5403197F24589987007B778A /* TripStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403197E24589987007B778A /* TripStop.swift */; };
 		5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629C24530194006ADCA1 /* AppDelegate.swift */; };
 		5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629E24530194006ADCA1 /* SceneDelegate.swift */; };
 		546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546362A024530194006ADCA1 /* TripManager.xcdatamodeld */; };
@@ -16,7 +18,7 @@
 		546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362B624530199006ADCA1 /* TripManagerTests.swift */; };
 		546362C224530199006ADCA1 /* TripManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362C124530199006ADCA1 /* TripManagerUITests.swift */; };
 		546362D024533091006ADCA1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362CF24533091006ADCA1 /* MapView.swift */; };
-		546F7A9024533D5D0054316C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* Coordinator.swift */; };
+		546F7A9024533D5D0054316C /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* MapViewCoordinator.swift */; };
 		546F7A95245354100054316C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A94245354100054316C /* HomeView.swift */; };
 		546F7A97245354DD0054316C /* TripListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A96245354DD0054316C /* TripListView.swift */; };
 		546F7A99245358750054316C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A98245358750054316C /* Trip.swift */; };
@@ -24,6 +26,7 @@
 		547B364E24549CB500EC3E19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364D24549CB500EC3E19 /* Constants.swift */; };
 		547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364F24549E9100EC3E19 /* TripListViewModel.swift */; };
 		547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
+		54F14D082455B98A003CF8C4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 54F14D072455B98A003CF8C4 /* Polyline */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5403197C2458994C007B778A /* StopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		5403197E24589987007B778A /* TripStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStop.swift; sourceTree = "<group>"; };
 		5463629924530194006ADCA1 /* TripManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5463629C24530194006ADCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5463629E24530194006ADCA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +64,7 @@
 		546362C124530199006ADCA1 /* TripManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManagerUITests.swift; sourceTree = "<group>"; };
 		546362C324530199006ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546362CF24533091006ADCA1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		546F7A8F24533D5D0054316C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		546F7A8F24533D5D0054316C /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		546F7A94245354100054316C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		546F7A96245354DD0054316C /* TripListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListView.swift; sourceTree = "<group>"; };
 		546F7A98245358750054316C /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F14D082455B98A003CF8C4 /* Polyline in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				546F7A98245358750054316C /* Trip.swift */,
+				5403197E24589987007B778A /* TripStop.swift */,
+				5403197C2458994C007B778A /* StopAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,7 +196,7 @@
 		546F7A8C24533CF70054316C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				546F7A8F24533D5D0054316C /* Coordinator.swift */,
+				546F7A8F24533D5D0054316C /* MapViewCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -243,6 +251,9 @@
 			dependencies = (
 			);
 			name = TripManager;
+			packageProductDependencies = (
+				54F14D072455B98A003CF8C4 /* Polyline */,
+			);
 			productName = TripManager;
 			productReference = 5463629924530194006ADCA1 /* TripManager.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +326,9 @@
 				Base,
 			);
 			mainGroup = 5463629024530194006ADCA1;
+			packageReferences = (
+				54F14D062455B98A003CF8C4 /* XCRemoteSwiftPackageReference "Polyline" */,
+			);
 			productRefGroup = 5463629A24530194006ADCA1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,13 +376,15 @@
 				547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */,
 				546F7A97245354DD0054316C /* TripListView.swift in Sources */,
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
-				546F7A9024533D5D0054316C /* Coordinator.swift in Sources */,
+				546F7A9024533D5D0054316C /* MapViewCoordinator.swift in Sources */,
 				547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */,
+				5403197F24589987007B778A /* TripStop.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,
 				547B364E24549CB500EC3E19 /* Constants.swift in Sources */,
 				546F7A99245358750054316C /* Trip.swift in Sources */,
 				546F7A95245354100054316C /* HomeView.swift in Sources */,
 				546362D024533091006ADCA1 /* MapView.swift in Sources */,
+				5403197D2458994D007B778A /* StopAnnotation.swift in Sources */,
 				5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,6 +710,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		54F14D062455B98A003CF8C4 /* XCRemoteSwiftPackageReference "Polyline" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raphaelmor/Polyline.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		54F14D072455B98A003CF8C4 /* Polyline */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 54F14D062455B98A003CF8C4 /* XCRemoteSwiftPackageReference "Polyline" */;
+			productName = Polyline;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		546362A024530194006ADCA1 /* TripManager.xcdatamodeld */ = {

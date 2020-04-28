@@ -1,7 +1,9 @@
 import Foundation
+import Combine
 
 class TripListViewModel: ObservableObject {
   @Published var tripViewModel: [TripViewModel] = [TripViewModel]()
+  @Published var selectedTripViewModel: TripViewModel?
   
   func load() {
     fetchTrips()

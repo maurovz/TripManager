@@ -1,12 +1,12 @@
 import Foundation
 import MapKit
 
-final class Coordinator: NSObject, MKMapViewDelegate {
+final class MapViewCoordinator: NSObject, MKMapViewDelegate {
   
-  var control: MapView
+  var mapView: MapView
   
   init(_ control: MapView) {
-    self.control = control
+    self.mapView = control
   }
   
   func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
@@ -18,5 +18,16 @@ final class Coordinator: NSObject, MKMapViewDelegate {
         }
       }
     }
+  }
+  
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    
+  }
+  
+  func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+    let renderer = MKPolylineRenderer(overlay: overlay)
+    renderer.strokeColor = .red
+    renderer.lineWidth = 4.0
+    return renderer
   }
 }

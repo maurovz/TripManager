@@ -1,4 +1,6 @@
 import Foundation
+import Polyline
+import MapKit
 
 struct TripViewModel {
   let trip: Trip
@@ -35,7 +37,12 @@ struct TripViewModel {
     return self.trip.driverName
   }
   
-  var route: String {
-    return self.trip.route
+  var route: [CLLocationCoordinate2D]? {
+    return decodePolyline(trip.route)
+  }
+  
+  func makeStopAnnotations(route: [CLLocationCoordinate2D]) -> [StopAnnotation] {
+    let tripStops = route.map { TripStop(placemark: MKPlacemark(coordinate: $0)) }
+    return tripStops.map(StopAnnotation.init)
   }
 }

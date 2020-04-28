@@ -9,8 +9,8 @@ struct HomeView: View {
   
   var body: some View {
     VStack {
-      MapView()
-      TripListView(tripsViewModel: tripListViewModel.tripViewModel)
+      MapView(tripViewModel: tripListViewModel.selectedTripViewModel)
+      TripListView(tripsViewModel: tripListViewModel.tripViewModel, tripListViewModel: tripListViewModel)
     }
   }
 }
