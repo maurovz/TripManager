@@ -13,7 +13,7 @@ struct TripViewModel {
     return self.trip.origin
   }
   
-  var stops: [Stop?]? {
+  var stops: [StopInfo?]? {
     return self.trip.stops
   }
   
@@ -41,17 +41,12 @@ struct TripViewModel {
     return decodePolyline(trip.route)
   }
   
-  func makeStopAnnotations(route: [CLLocationCoordinate2D]) -> [StopAnnotation] {
-    let tripStops = route.map { TripStop(placemark: MKPlacemark(coordinate: $0), id: 1) }
-    return tripStops.map(StopAnnotation.init)
-  }
-  
-  func makeStopAnnotations2(stops: [Stop?]) -> [MKPointAnnotation] {
+  func makeStopAnnotations(stops: [StopInfo?]) -> [MKPointAnnotation] {
     let annotations = stops.map({ (stop) -> MKPointAnnotation in
-      let annotation = MyAnnotation()
-      annotation.title = "Herrooo"
+      let annotation = StopAnnotation()
       if let stop = stop, let point = stop.point {
         annotation.coordinate = CLLocationCoordinate2D(latitude: point._latitude, longitude: point._longitude)
+        annotation.id = stop.id
       }
       return annotation
     })

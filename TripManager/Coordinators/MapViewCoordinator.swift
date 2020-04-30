@@ -2,7 +2,8 @@ import Foundation
 import MapKit
 
 final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
-  let mapView: MapView
+  private let mapView: MapView
+  private let tripListViewModel = TripListViewModel()
   
   init(_ control: MapView) {
     self.mapView = control
@@ -22,7 +23,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     
-    guard annotation is MKPointAnnotation else { return nil }
+    guard annotation is StopAnnotation else { return nil }
     
     var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     
@@ -34,6 +35,16 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
     }
     
     return annotationView
+  }
+
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    if let annotation = view.annotation as? StopAnnotation, let id = annotation.id {
+      tripListViewModel.fetchStop(id: id) { stop in
+        DispatchQueue.main.async {
+          print(stop)
+        }
+      }
+    }
   }
   
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

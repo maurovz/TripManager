@@ -29,8 +29,7 @@ struct MapView: UIViewRepresentable {
   private func updateAnnotations(from mapView: MKMapView) {
     if let tripViewModel = tripViewModel, let route = tripViewModel.route {
       mapView.removeAnnotations(mapView.annotations)
-//      let annotations = tripViewModel.makeStopAnnotations(route: route)
-      let annotations = tripViewModel.makeStopAnnotations2(stops: tripViewModel.stops!)
+      let annotations = tripViewModel.makeStopAnnotations(stops: tripViewModel.stops!)
       mapView.addAnnotations(annotations)
       
       mapView.removeOverlays(mapView.overlays)
@@ -45,10 +44,10 @@ struct MapView: UIViewRepresentable {
   }
 }
 
-struct InitialMapView_Previews: PreviewProvider {
-  static var previews: some View {
-    let trip = Trip(status: "", origin: Origin(address: "John St", point: Point(_latitude: 300.00, _longitude: 300.00)), stops: [Stop(point: Point(_latitude: 300, _longitude: 300), id: 3)], destination: Destination(address: "Peer St", point: Point(_latitude: 300, _longitude: 300)), endTime: "300", startTime: "300", description: "Hellooo Hellooo Hellooo  ", driverName: "Ben", route: "Laawwwl")
-    let tripViewModel = TripViewModel(trip: trip)
-    return MapView(tripViewModel: tripViewModel)
-  }
-}
+//struct InitialMapView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    let trip = Trip(status: "", origin: Origin(address: "John St", point: Point(_latitude: 300.00, _longitude: 300.00)), stops: [Stop(point: Point(_latitude: 300, _longitude: 300), id: 3)], destination: Destination(address: "Peer St", point: Point(_latitude: 300, _longitude: 300)), endTime: "300", startTime: "300", description: "Hellooo Hellooo Hellooo  ", driverName: "Ben", route: "Laawwwl")
+//    let tripViewModel = TripViewModel(trip: trip)
+//    return MapView(tripViewModel: tripViewModel)
+//  }
+//}

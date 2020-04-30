@@ -23,4 +23,26 @@ class WebService {
       }
     }.resume()
   }
+  
+  func getStop(id: String, completion: @escaping ((Stop?) -> Void)) {
+    guard let url = URL(string: Constants.url + Constants.stopsEndpoint + id) else {
+      fatalError("Url is not correct")
+    }
+    URLSession.shared.dataTask(with: url) { data, response, error in
+      guard let data = data, error == nil else {
+        DispatchQueue.main.async {
+          completion(nil)
+        }
+        return
+      }
+      do {
+        let stops = try JSONDecoder().decode(Stop.self, from: data)
+        DispatchQueue.main.async {
+          completion(stops)
+        }
+      } catch {
+        print(error)
+      }
+    }.resume()
+  }
 }
