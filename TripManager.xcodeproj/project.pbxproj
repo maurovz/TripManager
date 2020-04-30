@@ -26,6 +26,8 @@
 		547B364E24549CB500EC3E19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364D24549CB500EC3E19 /* Constants.swift */; };
 		547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B364F24549E9100EC3E19 /* TripListViewModel.swift */; };
 		547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
+		547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA219245AE88E00984730 /* CustomAnnotationView.swift */; };
+		547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */; };
 		54F14D082455B98A003CF8C4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 54F14D072455B98A003CF8C4 /* Polyline */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,8 @@
 		547B364D24549CB500EC3E19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		547B364F24549E9100EC3E19 /* TripListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListViewModel.swift; sourceTree = "<group>"; };
 		547B36522454A65000EC3E19 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
+		547FA219245AE88E00984730 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
+		547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,8 @@
 				546F7A94245354100054316C /* HomeView.swift */,
 				546362CF24533091006ADCA1 /* MapView.swift */,
 				546F7A96245354DD0054316C /* TripListView.swift */,
+				547FA219245AE88E00984730 /* CustomAnnotationView.swift */,
+				547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -377,6 +383,8 @@
 				546F7A97245354DD0054316C /* TripListView.swift in Sources */,
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
 				546F7A9024533D5D0054316C /* MapViewCoordinator.swift in Sources */,
+				547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */,
+				547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */,
 				547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */,
 				5403197F24589987007B778A /* TripStop.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,

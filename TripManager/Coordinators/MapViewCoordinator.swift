@@ -1,9 +1,8 @@
 import Foundation
 import MapKit
 
-final class MapViewCoordinator: NSObject, MKMapViewDelegate {
-  
-  var mapView: MapView
+final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
+  let mapView: MapView
   
   init(_ control: MapView) {
     self.mapView = control
@@ -20,8 +19,21 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
     }
   }
   
-  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     
+    guard annotation is MKPointAnnotation else { return nil }
+    
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+    
+    if annotationView == nil {
+      annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+      annotationView!.canShowCallout = true
+    } else {
+      annotationView!.annotation = annotation
+    }
+    
+    return annotationView
   }
   
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {

@@ -42,7 +42,19 @@ struct TripViewModel {
   }
   
   func makeStopAnnotations(route: [CLLocationCoordinate2D]) -> [StopAnnotation] {
-    let tripStops = route.map { TripStop(placemark: MKPlacemark(coordinate: $0)) }
+    let tripStops = route.map { TripStop(placemark: MKPlacemark(coordinate: $0), id: 1) }
     return tripStops.map(StopAnnotation.init)
+  }
+  
+  func makeStopAnnotations2(stops: [Stop?]) -> [MKPointAnnotation] {
+    let annotations = stops.map({ (stop) -> MKPointAnnotation in
+      let annotation = MyAnnotation()
+      annotation.title = "Herrooo"
+      if let stop = stop, let point = stop.point {
+        annotation.coordinate = CLLocationCoordinate2D(latitude: point._latitude, longitude: point._longitude)
+      }
+      return annotation
+    })
+    return annotations
   }
 }

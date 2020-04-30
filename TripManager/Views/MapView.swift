@@ -4,6 +4,8 @@ import SwiftUI
 
 struct MapView: UIViewRepresentable {
   private let tripViewModel: TripViewModel?
+  @State var selectedPlace: MKPointAnnotation?
+  @State var showingPlaceDetails = false
   
   init(tripViewModel: TripViewModel?) {
     self.tripViewModel = tripViewModel
@@ -27,11 +29,12 @@ struct MapView: UIViewRepresentable {
   private func updateAnnotations(from mapView: MKMapView) {
     if let tripViewModel = tripViewModel, let route = tripViewModel.route {
       mapView.removeAnnotations(mapView.annotations)
-      let annotations = tripViewModel.makeStopAnnotations(route: route)
+//      let annotations = tripViewModel.makeStopAnnotations(route: route)
+      let annotations = tripViewModel.makeStopAnnotations2(stops: tripViewModel.stops!)
       mapView.addAnnotations(annotations)
       
       mapView.removeOverlays(mapView.overlays)
-      let polyline = MKGeodesicPolyline(coordinates: route, count: route.count)
+      let polyline = MKPolyline(coordinates: route, count: route.count)
       mapView.addOverlay(polyline)
       setVisibleMapArea(map: mapView, polyline: polyline, edgeInsets: UIEdgeInsets(top: 30.0, left: 30.0, bottom: 30.0, right: 30.0), animated: true)
     }

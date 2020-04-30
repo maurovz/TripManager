@@ -12,3 +12,9 @@ final class StopAnnotation: NSObject, MKAnnotation {
     }
     
 }
+
+final class MyAnnotation: MKPointAnnotation {
+  
+  let description2: String? = nil  
+}
+
