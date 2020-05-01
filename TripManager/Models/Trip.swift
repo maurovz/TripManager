@@ -3,7 +3,7 @@ import Foundation
 struct Trip: Decodable  {
   let status: String
   let origin: Origin
-  let stops: [Stop]
+  let stops: [StopInfo]
   let destination: Destination
   let endTime: String
   let startTime: String
@@ -17,7 +17,7 @@ struct Origin: Decodable {
   let point: Point
 }
 
-struct Stop: Decodable {
+struct StopInfo: Decodable {
   let point: Point?
   let id: Int?
 }
