@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5403197D2458994D007B778A /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403197C2458994C007B778A /* StopAnnotation.swift */; };
-		5403197F24589987007B778A /* TripStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403197E24589987007B778A /* TripStop.swift */; };
 		54217B46245B19DB0090E85E /* StopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B45245B19DB0090E85E /* StopViewModel.swift */; };
 		54217B48245B1A1A0090E85E /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B47245B1A1A0090E85E /* Stop.swift */; };
 		54217B4C245B38160090E85E /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */; };
@@ -54,7 +53,6 @@
 
 /* Begin PBXFileReference section */
 		5403197C2458994C007B778A /* StopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
-		5403197E24589987007B778A /* TripStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripStop.swift; sourceTree = "<group>"; };
 		54217B45245B19DB0090E85E /* StopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModel.swift; sourceTree = "<group>"; };
 		54217B47245B1A1A0090E85E /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
@@ -151,10 +149,10 @@
 		5463629B24530194006ADCA1 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
+				546362AD24530198006ADCA1 /* Info.plist */,
 				54217B4A245B37E80090E85E /* Extensions */,
 				54217B49245B37DD0090E85E /* Managers */,
 				547B364A24549C1200EC3E19 /* Services */,
-				546362AD24530198006ADCA1 /* Info.plist */,
 				547B364824548CEC00EC3E19 /* Supporting Files */,
 				547B364924548D1E00EC3E19 /* Resources */,
 				546F7A912453449C0054316C /* Delegates */,
@@ -221,7 +219,6 @@
 			children = (
 				547B364F24549E9100EC3E19 /* TripListViewModel.swift */,
 				547B36522454A65000EC3E19 /* TripViewModel.swift */,
-				5403197E24589987007B778A /* TripStop.swift */,
 				54217B45245B19DB0090E85E /* StopViewModel.swift */,
 			);
 			path = ViewModels;
@@ -414,7 +411,6 @@
 				547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */,
 				547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */,
 				547B365024549E9100EC3E19 /* TripListViewModel.swift in Sources */,
-				5403197F24589987007B778A /* TripStop.swift in Sources */,
 				5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */,
 				547B364E24549CB500EC3E19 /* Constants.swift in Sources */,
 				54217B48245B1A1A0090E85E /* Stop.swift in Sources */,

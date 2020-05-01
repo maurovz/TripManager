@@ -4,8 +4,6 @@ import SwiftUI
 
 struct MapView: UIViewRepresentable {
   private let tripViewModel: TripViewModel?
-  @State var selectedPlace: MKPointAnnotation?
-  @State var showingPlaceDetails = false
   
   init(tripViewModel: TripViewModel?) {
     self.tripViewModel = tripViewModel

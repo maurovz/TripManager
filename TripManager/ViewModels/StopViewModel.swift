@@ -24,6 +24,6 @@ struct StopViewModel {
    }
   
   var price: String {
-     return String(stop.price)
+    return String(format: "$%.02f", stop.price)
    }
 }
