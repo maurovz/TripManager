@@ -149,7 +149,6 @@
 		5463629B24530194006ADCA1 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
-				546362AD24530198006ADCA1 /* Info.plist */,
 				54217B4A245B37E80090E85E /* Extensions */,
 				54217B49245B37DD0090E85E /* Managers */,
 				547B364A24549C1200EC3E19 /* Services */,
@@ -244,6 +243,7 @@
 		547B364824548CEC00EC3E19 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				546362AD24530198006ADCA1 /* Info.plist */,
 				546362AA24530198006ADCA1 /* LaunchScreen.storyboard */,
 				546362A024530194006ADCA1 /* TripManager.xcdatamodeld */,
 			);
@@ -590,7 +590,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TripManager/Preview Content\"";
 				DEVELOPMENT_TEAM = PPCD7J8R79;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TripManager/Info.plist;
+				INFOPLIST_FILE = "TripManager/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,7 +610,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TripManager/Preview Content\"";
 				DEVELOPMENT_TEAM = PPCD7J8R79;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TripManager/Info.plist;
+				INFOPLIST_FILE = "TripManager/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
