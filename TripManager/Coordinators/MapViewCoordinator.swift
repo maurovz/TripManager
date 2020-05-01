@@ -2,38 +2,27 @@ import Foundation
 import MapKit
 
 final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
-  private let mapView: MapView
+  private let map: MapView
   private let tripListViewModel = TripListViewModel()
   
   init(_ control: MapView) {
-    self.mapView = control
+    self.map = control
   }
   
   func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
-    if let annotationView = views.first {
-      if let annotation = annotationView.annotation {
-        if annotation is MKUserLocation {
-          let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
-          mapView.setRegion(region, animated: true)
-        }
+    if let annotationView = views.first, let annotation = annotationView.annotation {
+      if annotation is MKUserLocation {
+        let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        mapView.setRegion(region, animated: true)
       }
     }
   }
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-    
     guard annotation is StopAnnotation else { return nil }
-    
-    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-    
-    if annotationView == nil {
-      annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-      annotationView!.canShowCallout = true
-    } else {
-      annotationView!.annotation = annotation
-    }
-    
+    guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)  else { return nil }
+    annotationView.annotation = annotation
+    mapView.register(CustomAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
     return annotationView
   }
 
@@ -41,7 +30,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate, ObservableObject {
     if let annotation = view.annotation as? StopAnnotation, let id = annotation.id {
       tripListViewModel.fetchStop(id: id) { stop in
         DispatchQueue.main.async {
-          print(stop)
+          self.map.updateAnnotations(from: mapView)
         }
       }
     }

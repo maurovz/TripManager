@@ -26,10 +26,10 @@ struct MapView: UIViewRepresentable {
     updateAnnotations(from: uiView)
   }
   
-  private func updateAnnotations(from mapView: MKMapView) {
-    if let tripViewModel = tripViewModel, let route = tripViewModel.route {
+  func updateAnnotations(from mapView: MKMapView) {
+    if let tripViewModel = tripViewModel, let route = tripViewModel.route, let stops = tripViewModel.stops {
       mapView.removeAnnotations(mapView.annotations)
-      let annotations = tripViewModel.makeStopAnnotations(stops: tripViewModel.stops!)
+      let annotations = tripViewModel.makeStopAnnotations(stops: stops)
       mapView.addAnnotations(annotations)
       
       mapView.removeOverlays(mapView.overlays)

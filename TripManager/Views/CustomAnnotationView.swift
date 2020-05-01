@@ -13,7 +13,6 @@ class CustomAnnotationView: MKPinAnnotationView {
   
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
-    configure()
   }
 }
 
@@ -24,14 +23,14 @@ private extension CustomAnnotationView {
   }
   
   func configureDetailView() {
-    guard let annotation = annotation else { return }
+    guard let annotation = annotation as? StopAnnotation, let id = annotation.id else { return }
     
     let annotationFrameRect = CGRect(origin: .zero, size: annotationViewSize)
     
     let customAnnotationView = UIView()
     customAnnotationView.translatesAutoresizingMaskIntoConstraints = false
     
-    let customAnnotationInfoView = UIHostingController(rootView: CustomAnnotationInfoView())
+    let customAnnotationInfoView = UIHostingController(rootView: CustomAnnotationInfoView(id: id, tripListViewModel: TripListViewModel()))
     customAnnotationInfoView.view.translatesAutoresizingMaskIntoConstraints = false
     customAnnotationInfoView.view.frame = customAnnotationView.bounds
     customAnnotationInfoView.view.backgroundColor = .clear

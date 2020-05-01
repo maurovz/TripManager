@@ -23,7 +23,7 @@ struct StopViewModel {
      return stop.tripId
    }
   
-  var price: Double {
-     return stop.price
+  var price: String {
+     return String(stop.price)
    }
 }
