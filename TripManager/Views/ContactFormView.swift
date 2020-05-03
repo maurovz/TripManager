@@ -9,6 +9,11 @@ struct ContactFormView: View {
     UITableView.appearance().backgroundColor = .clear
     UITableView.appearance().separatorColor = .lightGray
     return VStack {
+      HStack {
+        Button("Dismiss") {
+          self.isPresented = false
+        }
+      }
       Text("Report an issue with the app")
         .font(.title)
         .padding()

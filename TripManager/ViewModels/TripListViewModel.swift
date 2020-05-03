@@ -24,13 +24,8 @@ class TripListViewModel: ObservableObject {
   func fetchStop(id: Int, completion: @escaping ((StopViewModel) -> Void)) {
     WebService().getStop(id: "\(String(describing: id))", completion: { stop in
       if let stop = stop {
-        self.saveStop(stop: stop)
         completion(StopViewModel(stop: stop))
       }
     })
-  }
-  
-  func saveStop(stop: Stop) {
-    CoreDataManager.shared.saveStop(stop: stop)
   }
 }

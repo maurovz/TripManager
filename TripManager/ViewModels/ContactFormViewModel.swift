@@ -9,6 +9,11 @@ class ContactFormViewModel: ObservableObject {
   var date: Date = Date()
   
   func saveReport() {
-//    CoreDataManager.shared.saveStop(stop: stop)
+    CoreDataManager.shared.saveReport(name: name, surname: surname, email: email, phone: phone, date: date, description: description)    
+    
+  }
+  
+  func fetchAllReports() -> [Report] {
+    CoreDataManager.shared.fetchAllReport()
   }
 }
