@@ -2,6 +2,8 @@ import SwiftUI
 
 struct HomeView: View {
   @ObservedObject private var tripListViewModel = TripListViewModel()
+  @State var contactFormViewModel = ContactFormViewModel()
+  @State var showContactForm = false
   private let tripListOffset = UIScreen.main.bounds.height * 0.2
   
   init() {
@@ -28,8 +30,11 @@ struct HomeView: View {
         HStack {
           Spacer()
           Button("Report Issue") {
-            self.tripListViewModel.dragOffset = CGSize(width: 0, height:  720)
+            self.showContactForm.toggle()
           }.padding()
+          .sheet(isPresented: $showContactForm) {
+            ContactFormView(contactFormViewModel: self.$contactFormViewModel)
+          }
         }
         Spacer()
       }

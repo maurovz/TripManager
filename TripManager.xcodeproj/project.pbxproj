@@ -12,6 +12,9 @@
 		54217B48245B1A1A0090E85E /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B47245B1A1A0090E85E /* Stop.swift */; };
 		54217B4C245B38160090E85E /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */; };
 		54217B4E245B383B0090E85E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B4D245B383B0090E85E /* CoreDataManager.swift */; };
+		545B4301245EE50A003D98D9 /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4300245EE50A003D98D9 /* ContactFormView.swift */; };
+		545B4303245EE563003D98D9 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4302245EE563003D98D9 /* ContactFormViewModel.swift */; };
+		545B4304245EE563003D98D9 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4302245EE563003D98D9 /* ContactFormViewModel.swift */; };
 		5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629C24530194006ADCA1 /* AppDelegate.swift */; };
 		5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629E24530194006ADCA1 /* SceneDelegate.swift */; };
 		546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546362A024530194006ADCA1 /* TripManager.xcdatamodeld */; };
@@ -57,6 +60,8 @@
 		54217B47245B1A1A0090E85E /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
 		54217B4D245B383B0090E85E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		545B4300245EE50A003D98D9 /* ContactFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormView.swift; sourceTree = "<group>"; };
+		545B4302245EE563003D98D9 /* ContactFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModel.swift; sourceTree = "<group>"; };
 		5463629924530194006ADCA1 /* TripManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5463629C24530194006ADCA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5463629E24530194006ADCA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +205,7 @@
 				546F7A96245354DD0054316C /* TripListView.swift */,
 				547FA219245AE88E00984730 /* CustomAnnotationView.swift */,
 				547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */,
+				545B4300245EE50A003D98D9 /* ContactFormView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				547B364F24549E9100EC3E19 /* TripListViewModel.swift */,
 				547B36522454A65000EC3E19 /* TripViewModel.swift */,
 				54217B45245B19DB0090E85E /* StopViewModel.swift */,
+				545B4302245EE563003D98D9 /* ContactFormViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -415,6 +422,7 @@
 				547B364E24549CB500EC3E19 /* Constants.swift in Sources */,
 				54217B48245B1A1A0090E85E /* Stop.swift in Sources */,
 				54217B4C245B38160090E85E /* NSManagedObjectContext+Extensions.swift in Sources */,
+				545B4303245EE563003D98D9 /* ContactFormViewModel.swift in Sources */,
 				546F7A99245358750054316C /* Trip.swift in Sources */,
 				546F7A95245354100054316C /* HomeView.swift in Sources */,
 				546362D024533091006ADCA1 /* MapView.swift in Sources */,
@@ -422,6 +430,7 @@
 				54217B46245B19DB0090E85E /* StopViewModel.swift in Sources */,
 				54217B4E245B383B0090E85E /* CoreDataManager.swift in Sources */,
 				5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */,
+				545B4301245EE50A003D98D9 /* ContactFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */,
+				545B4304245EE563003D98D9 /* ContactFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
