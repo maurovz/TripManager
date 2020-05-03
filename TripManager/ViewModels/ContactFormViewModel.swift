@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 class ContactFormViewModel: ObservableObject {
   var name: String = ""
@@ -10,7 +10,7 @@ class ContactFormViewModel: ObservableObject {
   
   func saveReport() {
     CoreDataManager.shared.saveReport(name: name, surname: surname, email: email, phone: phone, date: date, description: description)    
-    
+    UIApplication.shared.applicationIconBadgeNumber = fetchAllReports().count
   }
   
   func fetchAllReports() -> [Report] {

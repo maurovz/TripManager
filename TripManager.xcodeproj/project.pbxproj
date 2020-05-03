@@ -119,6 +119,7 @@
 		5408DDC2245F208900BEBCAB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5403197C2458994C007B778A /* StopAnnotation.swift */,
 				5408DDC3245F20A100BEBCAB /* TextView.swift */,
 			);
 			path = Helper;
@@ -210,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				546F7A94245354100054316C /* HomeView.swift */,
-				5403197C2458994C007B778A /* StopAnnotation.swift */,
 				546362CF24533091006ADCA1 /* MapView.swift */,
 				546F7A96245354DD0054316C /* TripListView.swift */,
 				547FA219245AE88E00984730 /* CustomAnnotationView.swift */,

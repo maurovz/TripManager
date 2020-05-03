@@ -9,6 +9,7 @@ struct HomeView: View {
   
   init() {
     tripListViewModel.load()
+    setupBadge()
   }
   
   var body: some View {
@@ -38,6 +39,16 @@ struct HomeView: View {
           }
         }
         Spacer()
+      }
+    }
+  }
+  
+  private func setupBadge() {
+    UNUserNotificationCenter.current().requestAuthorization(options: .badge) { (granted, error) in
+        if error != nil {
+            // success!
+        } else {
+          
       }
     }
   }
