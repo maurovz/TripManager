@@ -2,11 +2,14 @@ import SwiftUI
 
 struct TripListView: View {
   @ObservedObject var tripListViewModel: TripListViewModel
+  let onDragBegin: (DragGesture.Value) -> Void
+  let onDragEnd: (DragGesture.Value) -> Void
   
   var body: some View {
     UITableView.appearance().separatorColor = .clear
-    return VStack {
+    return VStack(spacing: 0) {
       HStack {
+        Spacer()
         VStack {
           Text("Upcoming Trips").font(.custom("Arial", size: 30))
             .foregroundColor(.black)
@@ -15,16 +18,26 @@ struct TripListView: View {
           Text("Scroll ip to see all trips").font(.custom("Arial", size: 15))
             .foregroundColor(.gray)
             .padding(2)
-        }
-      }.contentShape(Rectangle())
+        }.padding(10)
+        Spacer()
+      }  .contentShape(Rectangle())
+        .contentShape(Rectangle())
+        .background(Color.white)
+        .gesture(DragGesture()
+          .onChanged(self.onDragBegin)
+          .onEnded(self.onDragEnd))
+
       
       List(tripListViewModel.tripViewModel, id: \.driverName) { trip in
         Spacer()
         TripCellView(trip: trip).onTapGesture {
           self.tripListViewModel.selectedTripViewModel = trip
-        }
+        }.cornerRadius(20)
+        .shadow(radius: 10)
+        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
         Spacer()
       }
+      Spacer()
     }
   }
 }
@@ -85,13 +98,13 @@ struct TripCellView: View {
   }
 }
 
-//struct TripListView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    let trip = Trip(status: "", origin: Origin(address: "John St", point: Point(_latitude: 300.00, _longitude: 300.00)), stops: [Stop(point: Point(_latitude: 300, _longitude: 300), id: 3)], destination: Destination(address: "Peer St", point: Point(_latitude: 300, _longitude: 300)), endTime: "300", startTime: "300", description: "Hellooo Hellooo Hellooo  ", driverName: "Ben", route: "Laawwwl")
-//    
-//    let tripListViewModel = TripListViewModel()
-//    tripListViewModel.tripViewModel = [TripViewModel(trip: trip)]
-//
-//    return TripListView(tripListViewModel: tripListViewModel)
-//  }
-//}
+struct TripListView_Previews: PreviewProvider {
+  static var previews: some View {
+    let trip = Trip(status: "", origin: Origin(address: "John St", point: Point(_latitude: 300.00, _longitude: 300.00)), stops: [StopInfo(point: Point(_latitude: 300, _longitude: 300), id: 3)], destination: Destination(address: "Peer St", point: Point(_latitude: 300, _longitude: 300)), endTime: "300", startTime: "300", description: "Description Point", driverName: "Ben", route: "1234XD")
+
+    let tripListViewModel = TripListViewModel()
+    tripListViewModel.tripViewModel = [TripViewModel(trip: trip)]
+
+    return TripListView(tripListViewModel: tripListViewModel, onDragBegin: { _ in }, onDragEnd: { _ in })
+  }
+}

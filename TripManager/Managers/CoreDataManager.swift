@@ -11,10 +11,14 @@ class CoreDataManager {
     self.managedObjectContext = managedObjectContext
   }
   
-  func saveStop(stop: Stop) {
-    let currentStop = CurrentStop(context: self.managedObjectContext)
-    currentStop.userName = stop.userName
-    
+  func saveReport(name: String, surname: String, email: String, phone: String, date: Date, description: String) {
+    let report = Report(context: self.managedObjectContext)
+    report.name = name
+    report.surname = surname
+    report.email = email
+    report.phone = phone
+    report.date = date
+    report.reportDescription = description
     do {
       try self.managedObjectContext.save()
     } catch let error as NSError {
@@ -22,17 +26,14 @@ class CoreDataManager {
     }
   }
   
-  private func fetchStop(id: String) -> CurrentStop? {
-    var stops = [CurrentStop]()
-    let request: NSFetchRequest<CurrentStop> = CurrentStop.fetchRequest()
-    request.predicate = NSPredicate(format: "id == %@", id)
-    
+  func fetchAllReport() -> [Report] {
+    var reports = [Report]()
+    let request: NSFetchRequest<Report> = Report.fetchRequest()
     do {
-      stops = try self.managedObjectContext.fetch(request)
+      reports = try self.managedObjectContext.fetch(request)
     } catch let error as NSError {
       print(error)
     }
-    
-    return stops.first
+    return reports
   }
 }
