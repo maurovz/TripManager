@@ -21,7 +21,7 @@
 		546362A624530198006ADCA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546362A524530198006ADCA1 /* Assets.xcassets */; };
 		546362A924530198006ADCA1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 546362A824530198006ADCA1 /* Preview Assets.xcassets */; };
 		546362AC24530198006ADCA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 546362AA24530198006ADCA1 /* LaunchScreen.storyboard */; };
-		546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362B624530199006ADCA1 /* TripManagerTests.swift */; };
+		546362B724530199006ADCA1 /* TripViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362B624530199006ADCA1 /* TripViewModelTest.swift */; };
 		546362C224530199006ADCA1 /* TripManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362C124530199006ADCA1 /* TripManagerUITests.swift */; };
 		546362D024533091006ADCA1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546362CF24533091006ADCA1 /* MapView.swift */; };
 		546F7A9024533D5D0054316C /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546F7A8F24533D5D0054316C /* MapViewCoordinator.swift */; };
@@ -34,6 +34,7 @@
 		547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
 		547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA219245AE88E00984730 /* CustomAnnotationView.swift */; };
 		547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */; };
+		54AA8907245F5F3800DD7ED4 /* StopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */; };
 		54F14D082455B98A003CF8C4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 54F14D072455B98A003CF8C4 /* Polyline */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +73,7 @@
 		546362AB24530198006ADCA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		546362AD24530198006ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546362B224530199006ADCA1 /* TripManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		546362B624530199006ADCA1 /* TripManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManagerTests.swift; sourceTree = "<group>"; };
+		546362B624530199006ADCA1 /* TripViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModelTest.swift; sourceTree = "<group>"; };
 		546362B824530199006ADCA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		546362BD24530199006ADCA1 /* TripManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		546362C124530199006ADCA1 /* TripManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripManagerUITests.swift; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		547B36522454A65000EC3E19 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		547FA219245AE88E00984730 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationInfoView.swift; sourceTree = "<group>"; };
+		54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +194,8 @@
 		546362B524530199006ADCA1 /* TripManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				546362B624530199006ADCA1 /* TripManagerTests.swift */,
+				54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */,
+				546362B624530199006ADCA1 /* TripViewModelTest.swift */,
 				546362B824530199006ADCA1 /* Info.plist */,
 			);
 			path = TripManagerTests;
@@ -449,7 +452,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */,
+				54AA8907245F5F3800DD7ED4 /* StopViewModelTest.swift in Sources */,
+				546362B724530199006ADCA1 /* TripViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
