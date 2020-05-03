@@ -35,6 +35,7 @@
 		547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA219245AE88E00984730 /* CustomAnnotationView.swift */; };
 		547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */; };
 		54AA8907245F5F3800DD7ED4 /* StopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */; };
+		54AA890A245F623500DD7ED4 /* ContactFormViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA8909245F623500DD7ED4 /* ContactFormViewModelTest.swift */; };
 		54F14D082455B98A003CF8C4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 54F14D072455B98A003CF8C4 /* Polyline */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		547FA219245AE88E00984730 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationInfoView.swift; sourceTree = "<group>"; };
 		54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModelTest.swift; sourceTree = "<group>"; };
+		54AA8909245F623500DD7ED4 /* ContactFormViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			children = (
 				54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */,
 				546362B624530199006ADCA1 /* TripViewModelTest.swift */,
+				54AA8909245F623500DD7ED4 /* ContactFormViewModelTest.swift */,
 				546362B824530199006ADCA1 /* Info.plist */,
 			);
 			path = TripManagerTests;
@@ -452,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AA890A245F623500DD7ED4 /* ContactFormViewModelTest.swift in Sources */,
 				54AA8907245F5F3800DD7ED4 /* StopViewModelTest.swift in Sources */,
 				546362B724530199006ADCA1 /* TripViewModelTest.swift in Sources */,
 			);
