@@ -1,10 +1,11 @@
-import Foundation
+import UIKit
 
 class TripListViewModel: ObservableObject {
   @Published var tripViewModel: [TripViewModel] = [TripViewModel]()
   @Published var stopViewModel: [StopViewModel] = [StopViewModel]()
   @Published var selectedTripViewModel: TripViewModel?
   @Published var selectedStopViewModel: StopViewModel?
+  @Published var dragOffset: CGSize = CGSize(width: 0, height: 400)
   
   func load() {
     fetchTrips()
