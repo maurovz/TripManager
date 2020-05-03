@@ -12,7 +12,7 @@ class CoreDataManager {
   }
   
   func saveStop(stop: Stop) {
-    let currentStop = CurrentStop(context: self.managedObjectContext)
+    let currentStop = Report(context: self.managedObjectContext)
     currentStop.userName = stop.userName
     
     do {
@@ -22,9 +22,9 @@ class CoreDataManager {
     }
   }
   
-  private func fetchStop(id: String) -> CurrentStop? {
-    var stops = [CurrentStop]()
-    let request: NSFetchRequest<CurrentStop> = CurrentStop.fetchRequest()
+  private func fetchStop(id: String) -> Report? {
+    var stops = [Report]()
+    let request: NSFetchRequest<Report> = Report.fetchRequest()
     request.predicate = NSPredicate(format: "id == %@", id)
     
     do {

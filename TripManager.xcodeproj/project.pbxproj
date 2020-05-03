@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5403197D2458994D007B778A /* StopAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5403197C2458994C007B778A /* StopAnnotation.swift */; };
+		5408DDC4245F20A100BEBCAB /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5408DDC3245F20A100BEBCAB /* TextView.swift */; };
 		54217B46245B19DB0090E85E /* StopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B45245B19DB0090E85E /* StopViewModel.swift */; };
 		54217B48245B1A1A0090E85E /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B47245B1A1A0090E85E /* Stop.swift */; };
 		54217B4C245B38160090E85E /* NSManagedObjectContext+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		5403197C2458994C007B778A /* StopAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopAnnotation.swift; sourceTree = "<group>"; };
+		5408DDC3245F20A100BEBCAB /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		54217B45245B19DB0090E85E /* StopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModel.swift; sourceTree = "<group>"; };
 		54217B47245B1A1A0090E85E /* Stop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
 		54217B4B245B38160090E85E /* NSManagedObjectContext+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Extensions.swift"; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5408DDC2245F208900BEBCAB /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5408DDC3245F20A100BEBCAB /* TextView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		54217B49245B37DD0090E85E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +164,7 @@
 		5463629B24530194006ADCA1 /* TripManager */ = {
 			isa = PBXGroup;
 			children = (
+				5408DDC2245F208900BEBCAB /* Helper */,
 				54217B4A245B37E80090E85E /* Extensions */,
 				54217B49245B37DD0090E85E /* Managers */,
 				547B364A24549C1200EC3E19 /* Services */,
@@ -411,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				547B364C24549C9500EC3E19 /* WebService.swift in Sources */,
+				5408DDC4245F20A100BEBCAB /* TextView.swift in Sources */,
 				547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */,
 				546F7A97245354DD0054316C /* TripListView.swift in Sources */,
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,

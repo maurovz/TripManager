@@ -4,7 +4,8 @@ struct HomeView: View {
   @ObservedObject private var tripListViewModel = TripListViewModel()
   @State var contactFormViewModel = ContactFormViewModel()
   @State var showContactForm = false
-  private let tripListOffset = UIScreen.main.bounds.height * 0.2
+  private let tripListMinimumOffset = UIScreen.main.bounds.height * 0.2
+  private let tripListMaximumOffset = UIScreen.main.bounds.height * 0.8
   
   init() {
     tripListViewModel.load()
@@ -17,10 +18,10 @@ struct HomeView: View {
         TripListView(tripListViewModel: tripListViewModel, onDragBegin: { value in
           self.tripListViewModel.dragOffset = CGSize(width: value.translation.width, height: value.translation.height)
         }, onDragEnd: { value in
-          if value.translation.height < self.tripListOffset {
-            self.tripListViewModel.dragOffset = CGSize(width: 0, height:  100)
+          if value.translation.height < self.tripListMinimumOffset {
+            self.tripListViewModel.dragOffset = CGSize(width: 0, height: self.tripListMinimumOffset)
           } else {
-            self.tripListViewModel.dragOffset = CGSize(width: 0, height: 720)
+            self.tripListViewModel.dragOffset = CGSize(width: 0, height: self.tripListMaximumOffset)
           }
         }).animation(.spring())
         .offset(y: tripListViewModel.dragOffset.height)

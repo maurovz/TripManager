@@ -5,7 +5,7 @@ class TripListViewModel: ObservableObject {
   @Published var stopViewModel: [StopViewModel] = [StopViewModel]()
   @Published var selectedTripViewModel: TripViewModel?
   @Published var selectedStopViewModel: StopViewModel?
-  @Published var dragOffset: CGSize = CGSize(width: 0, height: 400)
+  @Published var dragOffset: CGSize = CGSize(width: 0, height: UIScreen.main.bounds.height * 0.8)
   
   func load() {
     fetchTrips()
