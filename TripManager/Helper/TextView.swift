@@ -1,4 +1,5 @@
 import SwiftUI
+
 struct TextView: UIViewRepresentable {
   @Binding var text: String
   
@@ -7,17 +8,13 @@ struct TextView: UIViewRepresentable {
   }
   
   func makeUIView(context: Context) -> UITextView {
-    
-    let myTextView = UITextView()
-    myTextView.delegate = context.coordinator
-    
-    myTextView.font = UIFont(name: "HelveticaNeue", size: 15)
-    myTextView.isScrollEnabled = true
-    myTextView.isEditable = true
-    myTextView.isUserInteractionEnabled = true
-    myTextView.backgroundColor = UIColor(white: 0.0, alpha: 0.05)
-    
-    return myTextView
+    let customTextView = UITextView()
+    customTextView.delegate = context.coordinator
+    customTextView.isScrollEnabled = true
+    customTextView.isEditable = true
+    customTextView.isUserInteractionEnabled = true
+    customTextView.backgroundColor = .white
+    return customTextView
   }
   
   func updateUIView(_ uiView: UITextView, context: Context) {
@@ -25,7 +22,6 @@ struct TextView: UIViewRepresentable {
   }
   
   class Coordinator : NSObject, UITextViewDelegate {
-    
     var parent: TextView
     
     init(_ uiTextView: TextView) {

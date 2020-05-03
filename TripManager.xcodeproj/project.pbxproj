@@ -15,7 +15,6 @@
 		54217B4E245B383B0090E85E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54217B4D245B383B0090E85E /* CoreDataManager.swift */; };
 		545B4301245EE50A003D98D9 /* ContactFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4300245EE50A003D98D9 /* ContactFormView.swift */; };
 		545B4303245EE563003D98D9 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4302245EE563003D98D9 /* ContactFormViewModel.swift */; };
-		545B4304245EE563003D98D9 /* ContactFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545B4302245EE563003D98D9 /* ContactFormViewModel.swift */; };
 		5463629D24530194006ADCA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629C24530194006ADCA1 /* AppDelegate.swift */; };
 		5463629F24530194006ADCA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463629E24530194006ADCA1 /* SceneDelegate.swift */; };
 		546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 546362A024530194006ADCA1 /* TripManager.xcdatamodeld */; };
@@ -451,7 +450,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				546362B724530199006ADCA1 /* TripManagerTests.swift in Sources */,
-				545B4304245EE563003D98D9 /* ContactFormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
