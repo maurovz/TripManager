@@ -34,6 +34,7 @@
 		547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547B36522454A65000EC3E19 /* TripViewModel.swift */; };
 		547FA21A245AE88E00984730 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA219245AE88E00984730 /* CustomAnnotationView.swift */; };
 		547FA21C245AF29800984730 /* CustomAnnotationInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */; };
+		54A2571D24602498004DC131 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A2571C24602498004DC131 /* ValidationError.swift */; };
 		54AA8907245F5F3800DD7ED4 /* StopViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */; };
 		54AA890A245F623500DD7ED4 /* ContactFormViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA8909245F623500DD7ED4 /* ContactFormViewModelTest.swift */; };
 		54F14D082455B98A003CF8C4 /* Polyline in Frameworks */ = {isa = PBXBuildFile; productRef = 54F14D072455B98A003CF8C4 /* Polyline */; };
@@ -90,6 +91,7 @@
 		547B36522454A65000EC3E19 /* TripViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewModel.swift; sourceTree = "<group>"; };
 		547FA219245AE88E00984730 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		547FA21B245AF29800984730 /* CustomAnnotationInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationInfoView.swift; sourceTree = "<group>"; };
+		54A2571C24602498004DC131 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
 		54AA8906245F5F3800DD7ED4 /* StopViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopViewModelTest.swift; sourceTree = "<group>"; };
 		54AA8909245F623500DD7ED4 /* ContactFormViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 			children = (
 				546F7A98245358750054316C /* Trip.swift */,
 				54217B47245B1A1A0090E85E /* Stop.swift */,
+				54A2571C24602498004DC131 /* ValidationError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				547B364C24549C9500EC3E19 /* WebService.swift in Sources */,
 				5408DDC4245F20A100BEBCAB /* TextView.swift in Sources */,
 				547B36532454A65000EC3E19 /* TripViewModel.swift in Sources */,
+				54A2571D24602498004DC131 /* ValidationError.swift in Sources */,
 				546F7A97245354DD0054316C /* TripListView.swift in Sources */,
 				546362A224530194006ADCA1 /* TripManager.xcdatamodeld in Sources */,
 				546F7A9024533D5D0054316C /* MapViewCoordinator.swift in Sources */,
