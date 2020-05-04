@@ -4,6 +4,7 @@ struct ContactFormView: View {
   @Binding var contactFormViewModel: ContactFormViewModel
   @State var isPresented: Bool = false
   @State var descriptionTextFieldHeight: CGFloat = 150
+  @State var showingValidationAlert = false
   
   var body: some View {
     UITableView.appearance().backgroundColor = .clear
@@ -30,11 +31,18 @@ struct ContactFormView: View {
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: descriptionTextFieldHeight, maxHeight: .infinity)
         }
       }
-      
+      ValidationErrorView(validationErrors: contactFormViewModel.validationErrors)
       HStack {
         Button("Send Report") {
-                      self.contactFormViewModel.saveReport()
-                      self.isPresented = false
+          let errorReport = self.contactFormViewModel.validateFormFields()
+          if (errorReport.count) == 0 {
+            self.contactFormViewModel.saveReport()
+            self.isPresented = false
+          } else {
+            self.showingValidationAlert = true
+          }
+        }.alert(isPresented: $showingValidationAlert) {
+            Alert(title: Text("Please make sure textfields are not empty and email in the correct format"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
         }
         
       }.padding(EdgeInsets(top: 12, leading: 100, bottom: 12, trailing: 100))
@@ -43,6 +51,16 @@ struct ContactFormView: View {
         .cornerRadius(8)
       Spacer()
     }
+  }
+}
+
+struct ValidationErrorView: View {
+  @State var validationErrors: [ValidationError]
+  var body: some View {
+    ForEach(validationErrors, id: \.fieldName) { error in
+      Text(error.validationMessage)
+    }
+    
   }
 }
 
