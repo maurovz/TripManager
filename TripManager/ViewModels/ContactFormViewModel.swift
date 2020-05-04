@@ -3,6 +3,7 @@ import UIKit
 class ContactFormViewModel: ObservableObject {
   @Published var validationErrors = [ValidationError]()
   @Published var name: String = ""
+  var showReportView: Bool = false
   var surname: String = ""
   var email: String = ""
   var phone: String = ""
