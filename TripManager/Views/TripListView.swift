@@ -31,6 +31,7 @@ struct TripListView: View {
       List(tripListViewModel.tripViewModel, id: \.driverName) { trip in
         Spacer()
         TripCellView(trip: trip).onTapGesture {
+          self.tripListViewModel.resetDragOffset()
           self.tripListViewModel.selectedTripViewModel = trip
         }.cornerRadius(20)
         .shadow(radius: 10)

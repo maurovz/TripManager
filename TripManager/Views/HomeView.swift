@@ -4,6 +4,7 @@ struct HomeView: View {
   @ObservedObject private var tripListViewModel = TripListViewModel()
   @State var contactFormViewModel = ContactFormViewModel()
   @State var showContactForm = false
+  @State var showFullMap = false
   private let tripListMinimumOffset = UIScreen.main.bounds.height * 0.2
   private let tripListMaximumOffset = UIScreen.main.bounds.height * 0.8
   
@@ -26,7 +27,6 @@ struct HomeView: View {
           }
         }).animation(.spring())
         .offset(y: tripListViewModel.dragOffset.height)
-
       }
       VStack() {
         HStack {
@@ -44,13 +44,7 @@ struct HomeView: View {
   }
   
   private func setupBadge() {
-    UNUserNotificationCenter.current().requestAuthorization(options: .badge) { (granted, error) in
-        if error != nil {
-            // success!
-        } else {
-          
-      }
-    }
+    UNUserNotificationCenter.current().requestAuthorization(options: .badge) { (_, _) in }
   }
 }
 
